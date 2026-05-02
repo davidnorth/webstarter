@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: Utilities
+description: The six utility classes — flow, cluster, stack, center, visually-hidden, text-center.
+---
+
+<section class="section flow">
+  <h1>Utilities</h1>
+  <p>Six utility classes. No more. If you need a seventh, write a component or use <code>style=""</code>.</p>
+
+  <h2>.flow</h2>
+  <p>Vertical rhythm via <code>margin-block-start</code> on every sibling after the first. Override gap per-element with <code>--flow-space</code>.</p>
+  <div class="flow" style="border: 1px solid var(--color-border); padding: var(--space-md); border-radius: var(--radius-md);">
+    <p>Item one</p>
+    <p>Item two (default gap)</p>
+    <p style="--flow-space: var(--space-xl);">Item three (large gap via <code>--flow-space</code>)</p>
+    <p>Item four (default gap resumes)</p>
+  </div>
+
+  <h2>.cluster</h2>
+  <p>Flex row with wrapping and a consistent gap. For inline groups like button sets or tag lists.</p>
+  <div class="cluster">
+    <a class="button" href="#">Primary</a>
+    <a class="button" data-variant="secondary" href="#">Secondary</a>
+    <a class="button" data-variant="ghost" href="#">Ghost</a>
+  </div>
+
+  <h2>.stack</h2>
+  <p>Grid with a consistent vertical gap. For vertical groups of cards or sections.</p>
+  <div class="stack">
+    <article class="card"><h3>Card one</h3><p>A stack item.</p><a href="#">Link</a></article>
+    <article class="card"><h3>Card two</h3><p>A stack item.</p><a href="#">Link</a></article>
+  </div>
+
+  <h2>.center</h2>
+  <p>Centers content with <code>margin-inline: auto</code> and caps width at <code>--content-max</code> (65ch).</p>
+  <div class="center" style="border: 1px solid var(--color-border); padding: var(--space-md); border-radius: var(--radius-md);">
+    <p>This content is centered and capped at 65ch.</p>
+  </div>
+
+  <h2>.visually-hidden</h2>
+  <p>Hides content visually while keeping it accessible to screen readers. Used for icon-only buttons, skip links, and off-screen labels.</p>
+  <button class="button">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <polyline points="12 5 19 12 12 19"/>
+    </svg>
+    <span class="visually-hidden">Continue</span>
+  </button>
+  <p>The button above has a visually-hidden label — inspect the DOM or use a screen reader to confirm.</p>
+
+  <h2>.text-center</h2>
+  <p>Text alignment escape hatch.</p>
+  <p class="text-center" style="border: 1px solid var(--color-border); padding: var(--space-sm); border-radius: var(--radius-md);">This paragraph is centered with <code>.text-center</code>.</p>
+</section>

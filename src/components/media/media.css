@@ -1,0 +1,29 @@
+.media {
+  display: grid;
+  gap: var(--space-md);
+  container-type: inline-size;
+
+  & > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+  }
+
+  & > div {
+    display: grid;
+    gap: var(--space-sm);
+    align-content: start;
+
+    & > h2, & > h3 { font-size: var(--text-lg); }
+    & > p { color: var(--color-text-muted); font-size: var(--text-sm); }
+    & > a { font-size: var(--text-sm); font-weight: 600; }
+  }
+
+  @container (min-width: 36rem) {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+
+    & > img { aspect-ratio: 4 / 3; }
+  }
+}

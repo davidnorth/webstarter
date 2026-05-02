@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: Contact
+description: Get in touch using the contact form.
+---
+
+<section class="section flow">
+  <h1>Contact</h1>
+  <p>Demonstrates all field types: text, email, select, textarea, checkbox, and submit.</p>
+
+  <form class="contact-form" action="#">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required autocomplete="name" aria-describedby="name-hint">
+      <small class="field-hint" id="name-hint">As you'd like to be addressed.</small>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-hint">
+      <small class="field-hint" id="email-hint">We'll never share your address.</small>
+    </div>
+
+    <div class="field">
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject" required aria-describedby="subject-hint">
+        <option value="">Select a subject…</option>
+        <option value="general">General enquiry</option>
+        <option value="project">New project</option>
+        <option value="other">Other</option>
+      </select>
+      <small class="field-hint" id="subject-hint">Choose the topic that best fits.</small>
+    </div>
+
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required rows="5" aria-describedby="message-hint"></textarea>
+      <small class="field-hint" id="message-hint">Anything you'd like us to know.</small>
+    </div>
+
+    <div class="field">
+      <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-hint">
+      <label for="consent">I agree to the terms of service</label>
+      <small class="field-hint" id="consent-hint">Required to submit the form.</small>
+    </div>
+
+    <div>
+      <button class="button" type="submit">Send message</button>
+    </div>
+  </form>
+</section>

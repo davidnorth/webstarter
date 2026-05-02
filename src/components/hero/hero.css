@@ -1,0 +1,36 @@
+.hero {
+  display: grid;
+  gap: var(--space-md);
+  container-type: inline-size;
+
+  & > .eyebrow {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-brand-600);
+  }
+
+  & > h1 {
+    font-size: var(--text-3xl);
+    max-inline-size: 18ch;
+  }
+
+  & > .lede {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-inline-size: 45ch;
+  }
+
+  & > .cluster { margin-block-start: var(--space-sm); }
+
+  &[data-layout="split"] {
+    @container (min-width: 48rem) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      & > img { grid-row: 1 / -1; grid-column: 2; }
+      & > :not(img) { grid-column: 1; }
+    }
+  }
+}

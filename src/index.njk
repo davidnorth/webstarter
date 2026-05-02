@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Home
+description: A minimal marketing site starter kit built on 11ty with modern CSS.
+---
+
+<section class="section" data-bleed style="background: var(--color-brand-50);">
+  <div class="hero">
+    <span class="eyebrow">Webstarter</span>
+    <h1>Build faster marketing sites</h1>
+    <p class="lede">A minimal, portable starter kit built on 11ty. Clean semantic HTML, hand-written modern CSS, no framework lock-in.</p>
+    <div class="cluster">
+      <a class="button" href="/contact/">Get in touch</a>
+      <a class="button" data-variant="secondary" href="/articles/">Read articles</a>
+    </div>
+  </div>
+</section>
+
+<section class="section flow">
+  <h2>What's in the kit</h2>
+  <p>A small, opinionated set of markup and CSS conventions for marketing sites. Portable: the rendered HTML and CSS are the artifact, not the framework.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: var(--space-md); margin-block-start: var(--space-lg);">
+    <article class="card">
+      <h3>Design tokens</h3>
+      <p>Fluid type, fluid spacing, two-tier colour system — all as custom properties. No magic numbers.</p>
+      <a href="/colours/">See the colours</a>
+    </article>
+    <article class="card">
+      <h3>Ten components</h3>
+      <p>Button, card, hero, CTA, media, form field, nav, and more. Semantic HTML patterns with co-located CSS.</p>
+      <a href="/typography/">See typography</a>
+    </article>
+    <article class="card">
+      <h3>Portable output</h3>
+      <p>Copy the HTML and CSS into Rails, WordPress, Sanity — or stay in 11ty. No framework coupling.</p>
+      <a href="/articles/">Read articles</a>
+    </article>
+  </div>
+</section>
+
+<section class="section" data-bleed style="background: var(--color-surface-raised);">
+  <div class="cta">
+    <h2>Ready to build something?</h2>
+    <p>Fork the kit, replace the demo content, and ship. That's the whole workflow.</p>
+    <div class="cluster">
+      <a class="button" href="/contact/">Contact us</a>
+      <a class="button" data-variant="secondary" href="/articles/">Read the articles</a>
+    </div>
+  </div>
+</section>

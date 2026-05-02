@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: Typography
+description: Type scale, heading hierarchy, prose, and the flow utility.
+---
+
+<section class="section flow">
+  <h1>Typography</h1>
+
+  <h2>Type scale</h2>
+  <div class="stack">
+    <div><span style="font-size: var(--text-3xl); font-weight: 700; line-height: 1.1;">--text-3xl</span> <code style="font-size: var(--text-xs);">clamp(2.25rem, 1.9rem + 1.75vw, 3rem)</code></div>
+    <div><span style="font-size: var(--text-2xl); font-weight: 700; line-height: 1.1;">--text-2xl</span> <code style="font-size: var(--text-xs);">clamp(1.75rem, 1.5rem + 1.25vw, 2.25rem)</code></div>
+    <div><span style="font-size: var(--text-xl); font-weight: 700;">--text-xl</span> <code style="font-size: var(--text-xs);">clamp(1.375rem, 1.2rem + 0.875vw, 1.75rem)</code></div>
+    <div><span style="font-size: var(--text-lg);">--text-lg</span> <code style="font-size: var(--text-xs);">clamp(1.125rem, 1rem + 0.625vw, 1.375rem)</code></div>
+    <div><span style="font-size: var(--text-base);">--text-base</span> <code style="font-size: var(--text-xs);">clamp(1rem, 0.925rem + 0.375vw, 1.125rem)</code></div>
+    <div><span style="font-size: var(--text-sm);">--text-sm</span> <code style="font-size: var(--text-xs);">clamp(0.875rem, 0.8rem + 0.375vw, 1rem)</code></div>
+    <div><span style="font-size: var(--text-xs);">--text-xs</span> <code style="font-size: var(--text-xs);">clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)</code></div>
+  </div>
+
+  <h2>Heading levels</h2>
+  <div class="flow" style="--flow-space: var(--space-sm); border: 1px solid var(--color-border); padding: var(--space-md); border-radius: var(--radius-md);">
+    <h1>Heading 1 — text-3xl</h1>
+    <h2>Heading 2 — text-2xl</h2>
+    <h3>Heading 3 — text-xl</h3>
+    <h4>Heading 4 — text-lg</h4>
+    <h5>Heading 5 — text-base semibold</h5>
+    <h6>Heading 6 — text-sm uppercase</h6>
+  </div>
+
+  <h2>Prose</h2>
+  <article class="prose flow">
+    <h2>A prose section</h2>
+    <p>This paragraph demonstrates body copy in the prose context. Line height is 1.7, inline-size is capped at <code>--content-max</code> (65ch), and vertical rhythm is handled by the <code>.flow</code> utility.</p>
+    <p>A second paragraph. <strong>Bold text</strong> and <em>italic text</em> sit within the rhythm naturally, along with <a href="#">inline links</a>.</p>
+    <ul>
+      <li>Unordered list item one</li>
+      <li>Unordered list item two</li>
+      <li>Unordered list item three</li>
+    </ul>
+    <blockquote>
+      <p>A blockquote with a brand-coloured left border and muted italic text.</p>
+    </blockquote>
+    <pre><code>/* Example code block */
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-md));
+}</code></pre>
+  </article>
+
+  <h2>Flow utility</h2>
+  <p>The <code>.flow</code> class applies <code>margin-block-start</code> to every element after the first. Override the gap per-element with <code>--flow-space</code>.</p>
+  <div class="flow" style="border: 1px solid var(--color-border); padding: var(--space-md); border-radius: var(--radius-md);">
+    <p>First element — no top margin.</p>
+    <p>Second element — default <code>--flow-space</code> (--space-md).</p>
+    <p style="--flow-space: var(--space-xl);">Third element — custom <code>--flow-space: var(--space-xl)</code>.</p>
+    <p>Fourth element — back to default.</p>
+  </div>
+</section>

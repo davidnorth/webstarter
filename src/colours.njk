@@ -1,0 +1,127 @@
+---
+layout: base.njk
+title: Colours
+description: Design token colour ramps and semantic assignments.
+---
+
+<style>
+  .color-ramp {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: var(--space-2xs);
+    margin-block: var(--space-md);
+  }
+  .swatch {
+    aspect-ratio: 1;
+    background: var(--swatch-bg);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-3xs);
+  }
+  .swatch > span {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: oklch(30% 0 0 / 0.5);
+  }
+  .swatch-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  .swatch-sm {
+    inline-size: 2rem;
+    block-size: 2rem;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+</style>
+
+<section class="section flow">
+  <h1>Colours</h1>
+  <p>Primitive ramps (5 hues × 10 steps) and semantic tokens. All values in <code>oklch()</code>.</p>
+
+  <h2>Brand</h2>
+  <div class="color-ramp">
+    <div class="swatch" style="--swatch-bg: var(--color-brand-50);"><span>50</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-100);"><span>100</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-200);"><span>200</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-300);"><span>300</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-400);"><span>400</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-500);"><span>500</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-600);"><span>600</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-700);"><span>700</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-800);"><span>800</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-brand-900);"><span>900</span></div>
+  </div>
+
+  <h2>Neutral</h2>
+  <div class="color-ramp">
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-50);"><span>50</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-100);"><span>100</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-200);"><span>200</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-300);"><span>300</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-400);"><span>400</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-500);"><span>500</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-600);"><span>600</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-700);"><span>700</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-800);"><span>800</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-neutral-900);"><span>900</span></div>
+  </div>
+
+  <h2>Success</h2>
+  <div class="color-ramp">
+    <div class="swatch" style="--swatch-bg: var(--color-success-50);"><span>50</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-100);"><span>100</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-200);"><span>200</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-300);"><span>300</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-400);"><span>400</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-500);"><span>500</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-600);"><span>600</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-700);"><span>700</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-800);"><span>800</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-success-900);"><span>900</span></div>
+  </div>
+
+  <h2>Danger</h2>
+  <div class="color-ramp">
+    <div class="swatch" style="--swatch-bg: var(--color-danger-50);"><span>50</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-100);"><span>100</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-200);"><span>200</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-300);"><span>300</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-400);"><span>400</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-500);"><span>500</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-600);"><span>600</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-700);"><span>700</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-800);"><span>800</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-danger-900);"><span>900</span></div>
+  </div>
+
+  <h2>Warning</h2>
+  <div class="color-ramp">
+    <div class="swatch" style="--swatch-bg: var(--color-warning-50);"><span>50</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-100);"><span>100</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-200);"><span>200</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-300);"><span>300</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-400);"><span>400</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-500);"><span>500</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-600);"><span>600</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-700);"><span>700</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-800);"><span>800</span></div>
+    <div class="swatch" style="--swatch-bg: var(--color-warning-900);"><span>900</span></div>
+  </div>
+
+  <h2>Semantic tokens</h2>
+  <div class="stack">
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-text);"></div><code>--color-text</code> — neutral-900</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-text-muted);"></div><code>--color-text-muted</code> — neutral-600</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-surface); border: 1px solid var(--color-border);"></div><code>--color-surface</code> — white</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-surface-raised); border: 1px solid var(--color-border);"></div><code>--color-surface-raised</code> — neutral-50</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-border);"></div><code>--color-border</code> — neutral-200</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-link);"></div><code>--color-link</code> — brand-600</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-link-hover);"></div><code>--color-link-hover</code> — brand-700</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-focus);"></div><code>--color-focus</code> — brand-500</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-error);"></div><code>--color-error</code> — danger-600</div>
+    <div class="swatch-row"><div class="swatch-sm" style="background: var(--color-success);"></div><code>--color-success</code> — success-600</div>
+  </div>
+</section>

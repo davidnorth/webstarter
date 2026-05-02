@@ -1,0 +1,54 @@
+---
+layout: article.njk
+title: Modern CSS layout patterns
+description: A deep dive into grid, subgrid, and container queries.
+permalink: /articles/example/
+---
+
+<h1>Modern CSS layout patterns</h1>
+
+<p>Grid, subgrid, and container queries have changed how we build layouts. This article walks through the patterns used in this starter kit and explains why each choice was made.</p>
+
+<h2>The three-column page grid</h2>
+
+<p>The core layout primitive is a three-column grid on <code>main</code>: a flexible gutter on each side, with a content column capped at <code>65ch</code>. This pattern lets sections control their own bleed behaviour without per-component breakpoints.</p>
+
+<pre><code>main {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--space-md), 1fr)
+    [main-start] minmax(0, var(--content-max))
+    [main-end]   minmax(var(--space-md), 1fr) [full-end];
+}</code></pre>
+
+<p>Named lines (<code>full-start</code>, <code>main-start</code>, etc.) mean sections can opt into full-bleed or stay in the main column by name, not by a magic column count.</p>
+
+<h2>Full-bleed sections with subgrid</h2>
+
+<p>Adding <code>data-bleed</code> to a section extends its background edge-to-edge while snapping content back to the main column using subgrid. No negative margins, no overflow tricks.</p>
+
+<figure data-width="full">
+  <img
+    src="https://picsum.photos/seed/article-wide/1200/600"
+    srcset="https://picsum.photos/seed/article-wide/800/400 800w,
+            https://picsum.photos/seed/article-wide/1200/600 1200w"
+    sizes="100vw"
+    width="1200" height="600"
+    alt="A wide landscape photograph demonstrating full-bleed images in prose"
+    loading="lazy">
+  <figcaption>A full-bleed figure using <code>data-width="full"</code> inside the prose subgrid.</figcaption>
+</figure>
+
+<h2>Container queries</h2>
+
+<p>The <code>.media</code> component uses a container query to switch from stacked to side-by-side layout based on its own available width, not the viewport. This makes it safe to place in any column width without breakpoint overrides.</p>
+
+<blockquote>
+  <p>Container queries let components own their responsive behaviour. The parent decides how much space to give; the component decides what to do with it.</p>
+</blockquote>
+
+<h2>Fluid spacing and type</h2>
+
+<p>Every spacing and type token is <code>clamp()</code>-based. This eliminates most breakpoint-specific overrides: the scale compresses gracefully on small screens and expands on large ones. The only breakpoints left are structural — the nav collapse and the two-column media layout.</p>
+
+<p>The result is a site that feels intentional at every width without a wall of media queries.</p>

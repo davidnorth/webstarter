@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Articles
+description: A hand-written list of articles demonstrating the media component.
+permalink: /articles/
+---
+
+<section class="section flow">
+  <h1>Articles</h1>
+  <p>Hand-written demo articles showcasing the <code>.media</code> component pattern.</p>
+
+  <div class="stack">
+    <article class="media">
+      <img
+        src="https://picsum.photos/seed/art-1/800/600"
+        srcset="https://picsum.photos/seed/art-1/400/300 400w,
+                https://picsum.photos/seed/art-1/800/600 800w"
+        sizes="(min-width: 48rem) 25vw, 100vw"
+        width="800" height="600"
+        alt="Abstract geometric shapes in blue"
+        loading="lazy">
+      <div>
+        <h2><a href="/articles/example/">Modern CSS layout patterns</a></h2>
+        <p>A deep dive into grid, subgrid, and container queries — the tools that make this kit's layout work without a framework.</p>
+        <a href="/articles/example/">Read more</a>
+      </div>
+    </article>
+
+    <article class="media">
+      <img
+        src="https://picsum.photos/seed/art-2/800/600"
+        srcset="https://picsum.photos/seed/art-2/400/300 400w,
+                https://picsum.photos/seed/art-2/800/600 800w"
+        sizes="(min-width: 48rem) 25vw, 100vw"
+        width="800" height="600"
+        alt="A design workspace with colour swatches"
+        loading="lazy">
+      <div>
+        <h2><a href="/articles/example/">Design tokens with oklch()</a></h2>
+        <p>Why oklch is the right colour space for design tokens, and how to build a two-tier token system that stays maintainable.</p>
+        <a href="/articles/example/">Read more</a>
+      </div>
+    </article>
+
+    <article class="media">
+      <img
+        src="https://picsum.photos/seed/art-3/800/600"
+        srcset="https://picsum.photos/seed/art-3/400/300 400w,
+                https://picsum.photos/seed/art-3/800/600 800w"
+        sizes="(min-width: 48rem) 25vw, 100vw"
+        width="800" height="600"
+        alt="Code on a monitor"
+        loading="lazy">
+      <div>
+        <h2><a href="/articles/example/">Semantic HTML for marketing sites</a></h2>
+        <p>The case for minimal, semantic markup — fewer classes, better accessibility, and code that survives porting to any backend.</p>
+        <a href="/articles/example/">Read more</a>
+      </div>
+    </article>
+  </div>
+</section>

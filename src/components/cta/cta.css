@@ -1,0 +1,17 @@
+.cta {
+  display: grid;
+  gap: var(--space-md);
+  text-align: center;
+  padding-block: var(--space-xl);
+
+  & > h2 { font-size: var(--text-2xl); }
+
+  & > p {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-inline-size: 45ch;
+    margin-inline: auto;
+  }
+
+  & > .cluster { justify-content: center; }
+}

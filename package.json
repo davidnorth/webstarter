@@ -1,0 +1,19 @@
+{
+  "name": "webstarter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "lightningcss": "^1.25.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}

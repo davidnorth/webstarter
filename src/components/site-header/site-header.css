@@ -1,0 +1,28 @@
+.site-header {
+  display: grid;
+  grid-template-columns:
+    minmax(var(--space-md), 1fr)
+    minmax(0, var(--content-max))
+    minmax(var(--space-md), 1fr);
+  border-block-end: 1px solid var(--color-border);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  & > div {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+  }
+
+  & .site-logo {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+}
